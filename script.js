@@ -29,3 +29,36 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+
+  // // scrolling - top is realtive to the view port, not to the top of the page
+  // window.scrollTo(
+  //   s1coords.left + window.pageYOffset, // determines aboslute position relative to the document
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // // a better way of doing what we did above (but still old school)
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageYOffset, // determines aboslute position relative to the document
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  // // for testing purposes
+  // console.log(s1coords);
+  // console.log(e.target.getBoundingClientRect);
+  // console.log('Current scoll (X/Y)', window.pageXOffset, window.pageYOffset);
+  // console.log(
+  //   'height/width viewport',
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  // );
+
+  // best way to implement smooth scrolling for modern browsers
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
