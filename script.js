@@ -1,6 +1,6 @@
 'use strict';
 
-// JOELS WEBSITE
+// BANKIST WEBSITE
 
 ///////////////////////////////////////
 // Modal window
@@ -231,98 +231,3 @@ const slider = function () {
   });
 };
 slider();
-
-// document.addEventListener('DOMContentLoaded', function (e) {
-//   console.log('HTML parsed and DOM tree built!', e);
-// });
-
-// window.addEventListener('load', function (e) {
-//   console.log('Page fully loaded', e);
-// });
-
-// window.addEventListener('beforeunload', function (e) {
-//   e.preventDefault();
-//   console.log(e);
-//   e.returnValue = '';
-// });
-
-/////////////////////////////////////////////////////////////////////////////////
-// NOTES
-/////////////////////////////////////////////////////////////////////////////////
-
-// // scrolling - top is realtive to the view port, not to the top of the page
-// window.scrollTo(
-//   s1coords.left + window.pageYOffset, // determines aboslute position relative to the document
-//   s1coords.top + window.pageYOffset
-// );
-
-// // a better way of doing what we did above (but still old school)
-// window.scrollTo({
-//   left: s1coords.left + window.pageYOffset, // determines aboslute position relative to the document
-//   top: s1coords.top + window.pageYOffset,
-//   behavior: 'smooth',
-// });
-
-// // for testing purposes
-// console.log(s1coords);
-// console.log(e.target.getBoundingClientRect);
-// console.log('Current scoll (X/Y)', window.pageXOffset, window.pageYOffset);
-// console.log(
-//   'height/width viewport',
-//   document.documentElement.clientHeight,
-//   document.documentElement.clientWidth
-// );
-
-/////////////////////////////////////////////////////////////////////////////////
-// // rgb(255, 255, 255)
-// const randomInt = (min, max) => Math.floor(Math.random()(max - min + 1) + min);
-// const randomColor = () => {
-//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-// };
-
-// document.querySelector('.nav__link').addEventListener('click', function (e) {
-//   this.style.backgroundColor = randomColor;
-//   e.stopPropagation();
-// });
-
-// document
-//   .querySelector('.nav__links')
-//   .addEventListener('click', function (e) {});
-
-// document.querySelector('.nav').addEventListener('click', function (e) {});
-
-/////////////////////////////////////////////////////////////////////////////////
-// document.querySelectorAll('.nav__link').forEach(function (el) {
-//   el.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   });
-// });
-
-// 1. add event listener to common parent element
-// 2. determine what element originated the event
-
-// // Sticky Navigation
-// const initialCoords = section1.getBoundingClientRect();
-
-// window.addEventListener('scroll', function (e) {
-//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// });
-
-// // Sticky Nav with Intersection Observer
-// const observerCallback = function (entries, observer) {
-//   entries.forEach(entry => {
-//     console.log(entry);
-//   });
-// }; // will get called each time our observed element (target elements) intersects our root elements at the threshold we define
-
-// const obsOptions = {
-//   root: null,
-//   threshold: [0, 0.2], // the percentage that is desired to have visible in our root (section1)
-// };
-
-// const observer = new IntersectionObserver(observerCallback, obsOptions);
-// observer.observe(section1);
